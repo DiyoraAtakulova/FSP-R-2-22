@@ -50,14 +50,33 @@ def check_even(x): # 3 None
 result = list(filter(check_even, [2, 3, 4, 5, 6]))
 print(result)
 
-# def multiply(arr):
-#     res = []
-#     for i in arr:
-#         res.append(i*2)
-#     return res
-
-
 # zip(*iterables)
 zipper = zip([2, 3, 4, 5], (5, 6, 7), {3, 5, 6, 7})
 print(list(zipper))
+
+def func(a, d="sad", *args, user="fgf", game, **kwargs):
+    pass
+
+# Написать функцию, которая принимает любой формат аргументов
+def finc(*args, **kwargs):
+    return args, kwargs
+
+func = finc(1,2,3,4, [234,531], {1:"dadsd"}, sde = "ghgjd", rasge = "100")
+print("Func",func)
+
+def any_args(*args):
+    print(args)
+
+any_args(2, 3, [5, 6])
+
+
+class CopyList(list):
+    pass
+
+l = CopyList()
+l.append(300)
+print(l)
+r = []
+r.append(2)
+print(r)
 
