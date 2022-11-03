@@ -1,33 +1,24 @@
-# 1 не получилось
+# 1 
 
 import sys
 import random
 
-# a = int(input("Input initial range:"))
-# b = int(input("Input last range:"))
+a = int(sys.argv[1])
+b = int(sys.argv[2])
 
-# user_input = sys.stdin
-# print("Input : ", user_input)
+x = random.randint(a, b)
 
-# x = random.randint(a, b)
-
-class Num:
-
-    def sys_func(numbers):
-        numbers = random.randint(sys.stdin)
-        # print()
-
-    def find_number(x):
-        if num == x:
-            return True
-        else:
-            return False
+def find_number(x):
+    if num == x:
+        return True
+    else:
+        return False
 
 
-print(f"Вам нужно найти число в диапазоне")
+print(f"Вам нужно найти число в диапазоне {a}-{b}  {x}")
 while True:
     num = int(input("Введите число х: "))
-    result = Num.find_number(x)
+    result = find_number(x)
     if result:
         print("Правильно!")
         break
