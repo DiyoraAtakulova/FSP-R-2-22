@@ -24,4 +24,3 @@ def time_in_range(function):
 start = datetime.time(7, 0, 0)
 end = datetime.time(22, 0, 0)
 now = datetime.datetime.now().time()
-# print(start, end, now)
