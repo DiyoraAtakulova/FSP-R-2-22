@@ -1,0 +1,2 @@
+Read from file and translate
+Use a library and check
