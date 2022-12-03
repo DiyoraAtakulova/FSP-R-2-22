@@ -7,7 +7,7 @@ with open('russian.txt', mode='r+', encoding='utf-8') as file:
     for i in file:
         text += i
 
-with open("english.txt", mode='w') as file:
+with open("english.txt", mode='w', encoding='utf-8') as file:
     total = trn_ru_to_en.translate(text)
     file.write(total)
 
