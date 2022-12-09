@@ -60,13 +60,13 @@ class Steam:
                 print("Accept!")
             else:
                 print("Error")
-        id = 1
+
         if self.name and self.email and self.password and self.card:
             with open('users.csv', 'a', newline='') as file:
-                headers = ['id', 'name', 'email', 'password', 'card', 'purchases', 'games']
+                headers = ['name', 'email', 'password', 'card', 'purchases', 'games']
                 writer = csv.DictWriter(file, fieldnames=headers)
                 writer.writeheader()
-                writer.writerow({headers[0]: id, headers[1]: name, headers[2]: email, headers[3]: password, headers[4]: card, headers[5]: None,headers[6]: None})
+                writer.writerow({headers[0]: name, headers[1]: email, headers[2]: password, headers[3]: card, headers[4]: None,headers[5]: None})
             
             
 
