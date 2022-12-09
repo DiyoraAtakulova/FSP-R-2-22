@@ -7,7 +7,7 @@ class Steam:
     games = []
 
     def __init__(self, enter_option):
-        if enter_option == "reg": # registration
+        if enter_option == "registration": # registration
             self.register()
         elif enter_option == "login":
             self.login()
@@ -30,36 +30,36 @@ class Steam:
             pattern = r"([a-zA-Z]+[^0-9])"
             result = re.fullmatch(pattern, name)
             if result:
-                print("Accept!")
+                print("Correct name!")
             else:
-                print("Error")
+                print("Name error")
 
         if email:
             self.email = email
             pattern = r"([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+"
             result = re.fullmatch(pattern, email)
             if result:
-                print("Accept!")
+                print("Correct email!")
             else:
-                print("Error")
+                print("Email error")
                 
         if password:
             self.password = password
             pattern = r"^(?=.*[0-9].*)(?=.*[a-z].*)(?=.*[A-Z].*)[0-9a-zA-Z]{8,}$"
             result = re.fullmatch(pattern, password)
             if result:
-                print("Accept!")
+                print("Correct password!")
             else:
-                print("Error")
+                print("password error")
 
         if card:
             self.card = card
             pattern = r"[0-9]{16}"
             result = re.fullmatch(pattern, card)
             if result:
-                print("Accept!")
+                print("Correct card!")
             else:
-                print("Error")
+                print("card error")
 
         if self.name and self.email and self.password and self.card:
             with open('users.csv', 'a', newline='') as file:
